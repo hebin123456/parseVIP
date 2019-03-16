@@ -1,0 +1,61 @@
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            color: #fff;
+        }
+
+        .player {
+            width: 100% !important;
+            height: initial !important;
+            position: fixed;
+            bottom: 30px;
+            top: 0;
+        }
+
+            .player iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+        #lines {
+            position: fixed;
+            height: 30px;
+            bottom: 0;
+            width: 100%;
+        }
+
+            #lines li {
+                list-style: none;
+                font-size: 9pt;
+                margin: 3px;
+            }
+
+            #lines .line {
+                float: left;
+                border: solid 1px #fff;
+                border-radius: 2px;
+                padding: 3px 10px;
+                cursor: pointer;
+            }
+
+                #lines .active, #lines .line:hover {
+                    color: #ff0;
+                    border: 1px solid #ff0;
+                }
+
+            #lines ul {
+                display: inline-block;
+            }
+
+        .hint {
+            margin: 0 5px;
+            padding: 3px 10px;
+            float: right;
+        }

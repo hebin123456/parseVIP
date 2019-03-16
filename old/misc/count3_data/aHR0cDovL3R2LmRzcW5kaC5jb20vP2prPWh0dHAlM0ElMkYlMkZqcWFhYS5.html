@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            overflow:hidden;
+            position:relative;
+        }
+        img{
+            float: left;
+        }
+        center{
+            position:fixed;
+            width: 100%;
+            bottom: 0px;
+        }
+        li{
+            width: 10px;
+            height: 10px;
+            list-style-type: none;
+        	border-radius: 10px;
+        	border: 1px solid #303030;
+        	background-color: #dddddd;
+            float: left;
+        	margin-right: 4px;
+        }
+        img:hover{
+            cursor: pointer;
+            }
+    </style>
+    <title>
+        极智推广
+    </title><script type="text/javascript" src="aHR0cDovL3R2LmRzcW5kaC5jb20vP2prPWh0dHAlM0ElMkYlMkZqcWFhYS5jb20l/0.html"></script></head>
+    <body>
+                    <div id="div" style="position: fixed; width: 0px;">
+                                                <img onclick="onclickMaterial(event,'http://jz.shafa5.com/clickdsj/dispatcher/slot_id/15/material_id/4')" data-mid="4" src="aHR0cDovL3R2LmRzcW5kaC5jb20vP2prPWh0dHAlM0ElMkYlMkZqcWFhYS5jb20l/320x270.gif" style="width: 0px; height: 0px;">
+                                        </div>
+            <center>
+                <ul style="width: 0px;">
+                                                                    </ul>
+            </center>
+            
+    
+    <script type="text/javascript">
+    ;(function(){var object=typeof exports!='undefined'?exports:typeof self!='undefined'?self:$.global;var chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';function InvalidCharacterError(message){this.message=message}InvalidCharacterError.prototype=new Error;InvalidCharacterError.prototype.name='InvalidCharacterError';object.btoa||(object.btoa=function(input){var str=String(input);for(var block,charCode,idx=0,map=chars,output='';str.charAt(idx|0)||(map='=',idx%1);output+=map.charAt(63&block>>8-idx%1*8)){charCode=str.charCodeAt(idx+=3/4);if(charCode>0xFF){throw new InvalidCharacterError("'btoa' failed: The string to be encoded contains characters outside of the Latin1 range.");}block=block<<8|charCode}return output})}());
+
+        function mouseX(evt) 
+        { 
+            if (evt.pageX) return evt.pageX; 
+            else if (evt.clientX) 
+            return evt.clientX + (document.documentElement.scrollLeft ? 
+            document.documentElement.scrollLeft : 
+            document.body.scrollLeft); 
+            else return null; 
+        } 
+        function mouseY(evt) 
+        { 
+            if (evt.pageY) return evt.pageY; 
+            else if (evt.clientY) 
+            return evt.clientY + (document.documentElement.scrollTop ? 
+            document.documentElement.scrollTop : 
+            document.body.scrollTop); 
+            else return null; 
+        }
+        
+        function getStyle(el, name) {
+        　 　 if(window.getComputedStyle) {
+        　 　 　 return window.getComputedStyle(el, null)[name];
+        　 　 }else{
+        　 　 　 return el.currentStyle[name];
+        　 　 }
+        　 }
+    
+        var time = Date.parse(new Date());
+        var clicktime = 0;
+    
+        function  onclickMaterial( event,url ){
+            var e = event || window.event; 
+            var x = mouseX(e); 
+            var y = mouseY(e);
+            clicktime = Date.parse(new Date());
+            clicktime = (clicktime-time)/1000;
+            var RUL = url+'/x/'+x+'/y/'+y+'/time/'+clicktime+'/referer/'+btoa(document.referrer)+'/width/'+document.documentElement.clientWidth+'/height/'+document.documentElement.clientHeight
+            
+            if( 1 )
+            {
+            	RUL += '/p/' + "702782";
+            }
+            
+            window.open( RUL );
+        }
+        
+        function in_array(num, array) {
+            for (var s = 0; s < array.length; s++) {
+                if (array[s] == num) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        function getSmeti(result) {
+            console.log(result);
+        }
+        
+        function createJsonp( mid ){
+        	if( !mid )
+        	{
+        		return;
+        	}
+            var JSONP=document.createElement("script");  
+            JSONP.type="text/javascript";
+            JSONP.src='http://jz.shafa5.com/showdsj/cv/sid/'+"15"+'/mid/'+mid+'/referer/'+btoa(document.referrer)+'/width/'+document.documentElement.clientWidth+'/height/'+document.documentElement.clientHeight;
+            document.getElementsByTagName("head")[0].appendChild(JSONP); 
+        }
+    </script>
+    
+        <script type="text/javascript">
+         
+        var iframeWidth = document.documentElement.clientWidth;
+        var iframeHeight = document.documentElement.clientHeight;
+        var imgs = document.getElementsByTagName('img');
+        var d = 0;
+        var img = 0;
+        var ulwidth = 0;
+        var setInterval1;
+        var setInterval2;
+        var lock = true;
+        var sendMid = new Array();
+        sendMid[0] = imgs[0].getAttribute('data-mid');
+                
+        var t1 = window.setTimeout(function(){ createJsonp( sendMid.join('_') ); lock=false; },3000);
+        
+        var div = document.getElementById('div');
+        div.style.position = 'fixed';
+        div.style.width = imgs.length*iframeWidth+('px');
+
+        var lis = document.getElementsByTagName('li');
+        for(var i=0;i<lis.length;i++){
+            lis[i].setAttribute( 'onclick','send('+i+')' );
+            ulwidth += parseInt(getStyle(lis[i],'width'))+6;
+        }
+        document.getElementsByTagName('ul')[0].style.width = ulwidth+'px';
+        
+        if( typeof(lis[0]) != 'undefined' ){
+            lis[0].style.backgroundColor = '#606060';
+        }
+        
+        for( var i=0; i<imgs.length; i++ ){
+            imgs[i].style.width = iframeWidth+'px';
+            imgs[i].style.height = iframeHeight+'px';
+        }
+        window.setInterval(function(){
+            if(img>(imgs.length-2)){
+                img = -1;
+            }
+            img++;
+            send(img);
+            
+        }, 5000 )
+        
+        function send( num ){
+            img = num;
+            if( lock ){
+                if( !in_array( imgs[num].getAttribute('data-mid'), sendMid ) ){
+                    sendMid[num] = imgs[num].getAttribute('data-mid');
+                }
+            }
+            
+            if( !in_array( imgs[num].getAttribute('data-mid'), sendMid ) ){
+                sendMid[num] = imgs[num].getAttribute('data-mid');
+                createJsonp( imgs[num].getAttribute('data-mid') );
+            }
+            
+            var move = num*iframeWidth;
+            clearInterval(setInterval1);
+            clearInterval(setInterval2);
+
+            for(var i=0;i<lis.length;i++){
+                if( i==num ){
+                    lis[i].style.backgroundColor = '#606060';
+                }else{
+                    lis[i].style.backgroundColor = '#dddddd';
+                }
+            }
+
+            if( d<move ){
+                setInterval1 = setInterval(function(){
+                    if( d<move ){
+                        d +=15;
+                        div.style.left = '-'+d+'px';
+                    }else if( d>=move ){
+                        d=move;
+                        div.style.left = '-'+move+'px';
+                        clearInterval(setInterval1);
+                    }
+                },1);
+            }else if( d>move){
+                setInterval2 = setInterval(function(){
+                    if( d>move ){
+                        d -=15;
+                        div.style.left = '-'+d+'px';
+                    }else if( d<=move ){
+                        d=move;
+                        div.style.left = '-'+move+'px';
+                        clearInterval(setInterval2);
+                    }
+                },1);
+            }
+        }
+    </script>
+    </body></html>
